@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Set the page title -->
-    <title>Group Project</title>
+    <title>Group Project Rackly</title>
 
     <!-- Set the charset we're using to UTF-8 -->
     <meta charset="UTF-8" />
@@ -20,13 +20,41 @@
     <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
   </head>
   <body>
-    <!--
+    
 
-      ADD YOUR GROUP PROJECT CODE
+      <!-- red container div -->
+      <div class = "redContainer">
 
-      YOU MAY REMOVE THE BOILERPLATE CODE BELOW
+        <!-- smaller red container div -->
+        <div class = "smallContainer" >
 
-    -->
+          <!-- player health -->
+          <div class="playerHealthBox">
+            <div class = "playerHealthDecrease"></div>
+            <div class = "playerHealthDefault"></div>
+          </div>
+    
+          <!-- timer -->
+          <div class = "timer"></div>
+
+          <!-- enemy health -->
+          <div class = "enemyHealthBox">
+            <div class = "enemyHealthDecrease"></div>
+            <div class = "enemyHealthDefault"></div>
+          </div>
+          
+        </div>
+        <div class = "displayText">
+        </div>
+      </div>
+    
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      
     <main>
       <div id="app"></div>
     </main>
