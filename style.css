@@ -6,145 +6,145 @@
  VARIABLES
 */
 :root {
-  /* Core colours */
-  /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
-  --colour-amaranth: #e63946;
-  --colour-peppermint: #f1faee;
-  --colour-aquaisland: #a8dadc;
-  --colour-wedgewood: #457b9d;
-  --colour-cello: #1d3557;
-
-  /* Header configuration */
-  --header-heading-colour: var(--colour-peppermint);
-
-  /* Body configuration */
-  --body-default-colour: var(--colour-peppermint);
-  --body-background-colour: var(--colour-cello);
-}
-
-/*
-  PAGE / BODY
-*/
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
-}
-
-main {
-  min-height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/*
-  Screen reader text utility class
-*/
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-head
-{
-  box-sizing: border-box;
-  font-family: 'Press Start 2P', cursive;
-}
-
-.redContainer{
-
- position: relative; 
- display: inline-block"
-}
-.smallContainer{
-  position: absolute;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  padding: 20px;
-}
-
-.playerHealthBox{
-           
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  border-top: 4px solid white;
-  border-left: 4px solid white;
-   border-bottom: 4px solid white;
-}
-.playerHealthDecrease{
-  background-color: red; 
-  height: 30px; 
-  width: 100%
-}
-.playerHealthDefault{
-
-  position: absolute;
-  background: #818cf8;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-}
-    
-.timer{
+    /* Core colours */
+    /* https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
+    --colour-amaranth: #e63946;
+    --colour-peppermint: #f1faee;
+    --colour-aquaisland: #a8dadc;
+    --colour-wedgewood: #457b9d;
+    --colour-cello: #1d3557;
   
-            
-  background-color: black;
-  width: 100px;
-  height: 50px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  border: 4px solid white;
-}
-
-.enemyHealthBox{
-           
-  position: relative;
-  width: 100%;
-  border-top: 4px solid white;
-  border-bottom: 4px solid white;
-  border-right: 4px solid white;
-}
-          
-.enemyHealthDecrease{
-  background-color: red; height: 30px
-}
-
-.enemyHealthDefault{
-
-  position: absolute;
-  background: #818cf8;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-
-.displayText{
-          
-  position: absolute;
-  color: white;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: none;
+    /* Header configuration */
+    --header-heading-colour: var(--colour-peppermint);
+  
+    /* Body configuration */
+    --body-default-colour: var(--colour-peppermint);
+    --body-background-colour: var(--colour-cello);
   }
+  
+  /*
+    PAGE / BODY
+  */
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--body-default-colour);
+    background-color: var(--body-background-colour);
+  }
+  
+.main {
+    min-height: 100vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /*
+    Screen reader text utility class
+  */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+.head
+  {
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+.redContainer{
+  
+   position: relative; 
+   display: inline-block"
+  }
+  .smallContainer{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .playerHealthBox{
+             
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 4px solid white;
+    border-left: 4px solid white;
+     border-bottom: 4px solid white;
+  }
+  .playerHealthDecrease{
+    background-color: red; 
+    height: 30px; 
+    width: 100%
+  }
+  .playerHealthDefault{
+  
+    position: absolute;
+    background: #0af53d;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
+      
+.timer {
+    
+              
+    background-color: black;
+    width: 100px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 4px solid white;
+  }
+  
+  .enemyHealthBox{
+             
+    position: relative;
+    width: 100%;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+  }
+            
+  .enemyHealthDecrease{
+    background-color: red; height: 30px
+  }
+  
+  .enemyHealthDefault{
+  
+    position: absolute;
+    background: #0af53d;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  
+  .displayText{
+            
+    position: absolute;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    }
