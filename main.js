@@ -1,6 +1,18 @@
 //
 //  JS File
 
+function fullscreen() {
+    if (!fullWindowState) {
+        fullWindowState = true;
+        //canvas goes full Window
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        canvas.className = "fullscreen"
+
+    }
+
+}
+
 // Variables
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d')
