@@ -19,7 +19,11 @@
 
   /* Body configuration */
   --body-default-colour: var(--colour-peppermint);
-  --body-background-colour: var(--colour-cello);
+   background-image: url("/images/favicon/Background.png");
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 /*
