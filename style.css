@@ -28,7 +28,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--body-default-colour);
-  background-image: url("images\favicon\Background.png");
+  background-image: url("/images/favicon/Background.png");
   background-repeat: no-repeat;
   height: 100%;
   background-position: center;
