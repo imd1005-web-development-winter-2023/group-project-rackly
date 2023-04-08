@@ -90,3 +90,20 @@ function animate() {
 
 animate()
 
+/* start
+start() {
+    this.toggleScreen('start-screen',false);
+    this.toggleScreen('canvas', true);
+}
+
+function startGame() {
+    console.log('start game');
+
+}
+
+toggleScreen(id,toggle) {
+    let element = document.getElementById(id);
+    let display = (toggle) ? 'block' : 'none';
+    element.style.display = display;
+}
+*/

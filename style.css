@@ -159,4 +159,7 @@ canvas {
   left: 0;
   display: none;
   }
-      
+  
+  .start-screen{
+    display:block;
+  }
