@@ -23,7 +23,7 @@ function fullscreen() {
 
 }
 
-}
+
 
 // Variables
 const canvas = document.querySelector('canvas');
