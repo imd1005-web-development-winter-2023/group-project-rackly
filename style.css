@@ -62,7 +62,7 @@ head
 
 canvas {
   display: block;
-  background-image: url(".\images\favicon\Background.png");
+  background-image: url("./images/favicon/Background.png");
   background-repeat: no-repeat;
   height: 100%;
   background-position: center;
