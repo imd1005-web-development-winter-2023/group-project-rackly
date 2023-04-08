@@ -17,65 +17,45 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- Set the Favicon  -->
-    <link rel="icon" href="images/images/favicon/Screenshot 2023-04-06 152716.png" type="image/png+xml" />
-    <link rel="stylesheet" href="reset.css" />
-
+    <link rel="icon" href="./images/favicon/Screenshot 2023-04-06 152716.png" type="image/png+xml" />
+  </head>
   
-    <!-- This is where all of our awesome CSS code goes -->
-    <link rel="stylesheet" href="style.css" />
+  <body>
+    
 
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Press Start 2P', cursive;
-    }
-  </style>
-</head>
-<body>
-  <!-- red container div -->
-  <div style="position: relative; display: inline-block">
-    <!-- smaller red container div -->
+      <!-- red container div -->
+      <div class = "redContainer">
+
         <!-- smaller red container div -->
         <div class = "smallContainer" >
-    >
-      <!-- player health -->
-      <div class="playerHealthBox">
-          <div class = "playerHealthDecrease"></div>
-        <div
-          id="playerHealth"
-          class = "playerHealthDefault"></div>
-      </div>
 
-      <!-- timer -->
-      <div
-      id="timer"
-      class = "timer"></div>
-
-      <!-- enemy health -->
-      <div class = "enemyHealthBox">
-          <div class = "enemyHealthDecrease"></div>
-        <div
-          id="enemyHealth"
-          class = "enemyHealthDefault"
-        ></div>
-      </div>
-      <div></div>
-    </div>
-    <div
-      id="displayText"
-      class = "displayText">
+          <!-- player health -->
+          <div class="playerHealthBox">
+            <div class = "playerHealthDecrease"></div>
+            <div class = "playerHealthDefault"></div>
+          </div>
     
-    </div>
-    <canvas></canvas>
-  </div>
+          <!-- timer -->
+          <div class = "timer"></div>
 
+          <!-- enemy health -->
+          <div class = "enemyHealthBox">
+            <div class = "enemyHealthDecrease"></div>
+            <div class = "enemyHealthDefault"></div>
+          </div>
+          
+        </div>
+        <div class = "displayText">
+        </div>
+      </div>
+    
+   
+      
+    <main>
+      <div id="app"></div>
+    </main>
 
-  <script src="js/utils.js"></script>
-  <script src="js/classes.js"></script>
-  <script src="index.js"></script>
-</body>
     <!-- This is where we add our awesome JavaScript code -->
     <script src="./main.js"></script>
-    <script src="./utlis.js"></script>
   </body>
 </html>
