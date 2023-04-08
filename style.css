@@ -19,11 +19,7 @@
 
   /* Body configuration */
   --body-default-colour: var(--colour-peppermint);
-   background-image: url("/images/favicon/Background.png");
-  background-repeat: no-repeat;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
+  --body-background-colour: var(--colour-cello);
 }
 
 /*
@@ -32,7 +28,11 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
+  background-image: url("/images/favicon/Background.png");
+  background-repeat: no-repeat;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
 }
 
 main {
