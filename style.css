@@ -30,13 +30,14 @@ body {
   color: var(--body-default-colour);
   overflow: hidden;
 
+  /*
     display: block;
     background-image: url("./images/favicon/Background.png");
     background-repeat: no-repeat;
     height: 100%;
     background-position: center;
     background-size: cover;
-    
+    */
 }
 
 main {
@@ -68,13 +69,10 @@ head
   font-family: 'Press Start 2P', cursive;
 }
 
-
-
-
 .redContainer{
 
  position: relative; 
- display: inline-block"
+ display: inline-block;
 }
 .smallContainer{
   position: absolute;
