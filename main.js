@@ -32,6 +32,13 @@ const player = new Fighter({
     offset: {
         x: 0,
         y: 0
+    },
+    imageSrc: './images/favicon/Kangaroo_Idle.png',
+    framesMax: 8,
+    scale: 3,
+    offset: {
+        x: 30,
+        y: 80
     }
 })
 
