@@ -27,28 +27,25 @@
 
         <!-- smaller red container div -->
         <div class = "smallContainer" >
-          <div>
+          
           <!-- player health -->
-          <div class="playerHealthBox">
-            <div class = "playerHealthDecrease"></div>
-            <div class = "playerHealthDefault"></div>
-          </div>
+          <div class = "parentDivPlayer">
+            <div  class = "playerHealth"></div>
+           <div class ="childDivPlayer" id = "playerHealth"></div>
+            </div>
     
           <!-- timer -->
-          <div class = "timer"></div>
+          <div class = "timer" id = "timer">10</div>
 
           <!-- enemy health -->
-          <div class = "enemyHealthBox">
-            <div class = "enemyHealthDecrease"></div>
-            <div class = "enemyHealthDefault"></div>
+          <div class = "parentDivEnemy">
+          <div  class = "enemyHealth"></div>
+         <div class ="childDivEnemy" id = "enemyHealth"></div>
           </div>
-          
-        </div>
-        <div class = "displayText">
-        </div>
-      </div>
-    
+         <div></div>
+        
     </div>
+    <div class="tieTag" id="displayText">TIE</div>
    <canvas></canvas>
     </div>
       

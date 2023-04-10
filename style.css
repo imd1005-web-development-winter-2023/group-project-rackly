@@ -82,69 +82,76 @@ head
   padding: 20px;
 }
 
-.playerHealthBox{
-           
+.playerHealth {
+
+  background-color: yellow;
+  height: 30px;
+  width: 100%;
+}
+
+.parentDivPlayer {
   position: relative;
+  height: 30px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  border-top: 4px solid black;
-  border-left: 4px solid black;
-   border-bottom: 4px solid black;
 }
-.playerHealthDecrease{
-  background-color: red; 
-  height: 30px; 
-  width: 100%
-}
-.playerHealthDefault{
 
+.childDivPlayer {
   position: absolute;
-  background: #ff9d3a;
+  background: blue;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom:0;
   width: 100%;
 }
+
     
 .timer{
   
-            
-  background-color: rgb(255, 255, 255);
+  background-color: red;
   width: 100px;
-  height: 50px;
+  height: 100px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
-  border: 4px solid black;
-  border-radius: 10px;
 }
 
-.enemyHealthBox{
-           
-  position: relative;
-  width: 100%;
-  border-top: 4px solid black;
-  border-bottom: 4px solid black;
-  border-right: 4px solid black;
-}
-          
-.enemyHealthDecrease{
-  background-color: red; height: 30px
-}
+.tieTag {
 
-.enemyHealthDefault{
-
-  position: absolute;
-  background: #ff9d3a;
+  position:absolute;
+  color: white;
+  
+  align-items: center;
+  justify-content: center;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0;
+  left:0;
+  display: none;
 }
 
+.enemyHealth {
+
+  background-color: yellow;
+  height: 30px;
+}
+
+.parentDivEnemy {
+  position: relative;
+  height: 30px;
+  width: 100%;
+}
+
+.childDivEnemy {
+  position: absolute;
+  background: blue;
+  top: 0;
+  right: 0;
+  left:0;
+  bottom:0;
+}
 
 .displayText{
           
