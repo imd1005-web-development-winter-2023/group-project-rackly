@@ -34,7 +34,7 @@ const player = new Fighter({
         y: 0
     },
     imageSrc: './images/favicon/Kangaroo_Idle.png',
-    framesMax: 48,
+    framesMax: 32,
     scale: 1,
     offset: {
         x: 0,
@@ -43,7 +43,7 @@ const player = new Fighter({
     sprites: {
         idle: {
             imageSrc: './images/favicon/Kangaroo_Idle.png',
-            framesMax: 48
+            framesMax: 32
         },
         attack: {
             imageSrc: './images/favicon/Kangaroo_Attack.png',
@@ -84,7 +84,7 @@ const enemy = new Fighter({
         y: 0
     },
     imageSrc: './images/favicon/Dinosaur_Idle.png',
-    framesMax: 44, 
+    framesMax: 24, 
     scale: 1,
     offset: {
         x: 0,
@@ -93,7 +93,7 @@ const enemy = new Fighter({
     sprites: {
         idle: {
             imageSrc: './images/favicon/Dinosaur_Idle.png',
-            framesMax: 44
+            framesMax: 24
         },
         attack: {
             imageSrc: './images/favicon/Dinosaur_Attack.png',
@@ -164,17 +164,17 @@ function animate() {
 
     // Player mouvement
     if (keys.a.pressed && player.lastKey === 'a') {
-        player.velocity.x = -5
+        player.velocity.x = -10
     } else if (keys.d.pressed && player.lastKey === 'd') {
-        player.velocity.x = 5
+        player.velocity.x = 10
     }
 
     // Enemy mouvement
     if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
-        enemy.velocity.x = -5
+        enemy.velocity.x = -10
  
     } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
-        enemy.velocity.x = 5
+        enemy.velocity.x = 10
 
     }
 
