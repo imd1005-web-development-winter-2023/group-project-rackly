@@ -6,7 +6,7 @@ class Sprite {
         framesMax = 1, 
         offset = {x: 0, y: 0}}) {
         this.position = position
-        this.width = 50
+        this.width = 5
         this.height = 150
         this.image = new Image()
         this.image.src = imageSrc
@@ -15,7 +15,12 @@ class Sprite {
         this.framesCurrent = 0
         this.framesElapsed = 0
         this.framesHold = 5
-        this.offset = offset
+        this.offset = offset 
+        this.attackBox = {
+            position: this.position,
+            width: 10,
+            height: 10,
+        }
     }
 
     draw() {
@@ -74,7 +79,7 @@ class Fighter extends Sprite {
         })
 
         this.velocity = velocity
-        this.width = 50
+        this.width = 5
         this.height = 150
         this.lastKey
         this.attackBox = {
@@ -119,29 +124,34 @@ class Fighter extends Sprite {
     }
 
     attack() {
-        this.switchSprite('attackKan')
+        this.switchSprite('attack')
         this.isAttacking = true
+        setTimeout(() => {
+            this.isAttacking = false
+            this.switchSprite('idle')
+        }, 100) 
     }
 
-    takeHit(){
-        this.health -= 20
+    takeHit() {
+        this.health -= 10
         this.switchSprite('takeHit')
-    }
+        if (this.health <= 0) {
+          this.switchSprite('death')
+          this.death = true
+        } else setTimeout(() => {
+            this.switchSprite('idle')
+        }, 100) 
+      }
 
     switchSprite(sprite) {
-        if (
-            this.image === this.sprites.attackKan.image &&
-            this.framesCurrent < this.sprites.attackKan.framesMax - 1
-          )
+        if (this.image === this.sprites.death.image) {
+            if (this.framesCurrent === this.sprites.death.framesMax - 1)
+              this.dead = true
             return
-
-        if (
-            this.image === this.sprites.takeHit.image &&
-            this.framesCurrent < this.sprites.takeHit.framesMax - 1
-            )
-            return
+          }
 
         switch (sprite) {
+
             case 'idle':
                 if (this.image !== this.sprites.idle.image) {
                     this.image = this.sprites.idle.image
@@ -150,12 +160,12 @@ class Fighter extends Sprite {
                 }
                 break
 
-            case 'attackKan':
-                if (this.image !== this.sprites.attackKan.image) {
-                    this.image = this.sprites.attackKan.image
-                    this.framesMax = this.sprites.attackKan.framesMax
+            case 'attack':
+                if (this.image !== this.sprites.attack.image) {
+                    this.image = this.sprites.attack.image
+                    this.framesMax = this.sprites.attack.framesMax
                     this.framesCurrent = 0
-                }   
+                }
                 break
 
             case 'takeHit':
@@ -164,7 +174,15 @@ class Fighter extends Sprite {
                     this.framesMax = this.sprites.takeHit.framesMax
                     this.framesCurrent = 0
                 }
-                break
+                break    
+            case 'death':
+                if (this.image !== this.sprites.death.image) {
+                    this.image = this.sprites.death.image
+                    this.framesMax = this.sprites.death.framesMax
+                    this.framesCurrent = 0
+                }
+                break   
+
         }
     }
 
