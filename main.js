@@ -5,8 +5,8 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-canvas.width = 1024
-canvas.height = 576
+canvas.width = 3840
+canvas.height = 2240
 
 c.fillRect(0, 0, canvas.width, canvas.height)
 
@@ -17,7 +17,7 @@ const background = new Sprite({
         x: 0,
         y:0
     },
-    imageSrc: './images/favicon/Background (1).png'
+    imageSrc: './images/favicon/Background.png'
 }) 
 
 const player = new Fighter({
@@ -34,16 +34,16 @@ const player = new Fighter({
         y: 0
     },
     imageSrc: './images/favicon/Kangaroo_Idle.png',
-    framesMax: 8,
-    scale: 3,
+    framesMax: 48,
+    scale: 1,
     offset: {
         x: 30,
-        y: 80
+        y: 1200
     },
     sprites: {
         idle: {
             imageSrc: './images/favicon/Kangaroo_Idle.png',
-            framesMax: 8
+            framesMax: 48
         },
         attackKan: {
             imageSrc: './images/favicon/Kangaroo_Attack.png',
@@ -68,16 +68,16 @@ const enemy = new Fighter({
         y: 0
     },
     imageSrc: './images/favicon/Dinosaur_Idle.png',
-    framesMax: 4,
-    scale: 3,
+    framesMax: 44,
+    scale: 1,
     offset: {
         x: 30,
-        y: 80
+        y: 1200
     },
     sprites: {
         idle: {
             imageSrc: './images/favicon/Dinosaur_Idle.png',
-            framesMax: 4
+            framesMax: 44
         },
         attackKan: {
             imageSrc: './images/favicon/Dinosaur_Attack.png',
