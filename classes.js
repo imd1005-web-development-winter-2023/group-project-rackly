@@ -106,9 +106,33 @@ class Fighter extends Sprite {
         }else this.velocity.y += gravity
     }
     attack() {
+        this.switchSprite('attackKan')
         this.isAttacking = true
         setTimeout(() => {
             this.isAttacking = false
         }, 100)
     }
+
+    switchSprite(sprite) {
+        if (this.image === this.sprites.attackKan.image && 
+            this.framesCurrent < this.sprites.attackKan.framesMax -1) return
+
+        switch (sprite) {
+            case 'idle':
+                if (this.image !== this.sprites.idle.image) {
+                    this.image = this.sprites.idle.image
+                    this.framesMax = this.sprites.idle.framesMax
+                    this.framesCurrent = 0
+                }
+                break
+            case 'attackKan':
+                if (this.image !== this.sprites.attackKan.image) {
+                    this.image = this.sprites.attackKan.image
+                    this.framesMax = this.sprites.attackKan.framesMax
+                    this.framesCurrent = 0
+                    }
+                    break
+        }
+    }
+
 }
