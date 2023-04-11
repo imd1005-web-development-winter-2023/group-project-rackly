@@ -99,23 +99,28 @@ head
 
 .childDivPlayer {
   position: absolute;
-  background: blue;
+  background: rgb(93, 201, 91);
   top: 0;
   right: 0;
   bottom:0;
   width: 100%;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  border-left: 4px solid white;
 }
 
     
 .timer{
   
-  background-color: red;
+  background-color: black;
   width: 100px;
-  height: 100px;
+  height: 50px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+  border: 4px solid white;
 }
 
 .tieTag {
@@ -134,7 +139,7 @@ head
 
 .enemyHealth {
 
-  background-color: yellow;
+  background-color: rgb(255, 0, 0);
   height: 30px;
 }
 
@@ -146,11 +151,14 @@ head
 
 .childDivEnemy {
   position: absolute;
-  background: blue;
+  background: rgb(93, 201, 91);
   top: 0;
   right: 0;
   left:0;
   bottom:0;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
 }
 
 .displayText{

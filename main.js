@@ -49,6 +49,18 @@ const player = new Fighter({
             imageSrc: './images/favicon/Kangaroo_Attack.png',
             framesMax: 4
         },
+        takeHit: {
+            imageSrc: './images/favicon/Kangaroo_Hit.png',
+            framesMax: 4
+        }
+          },
+          attackBox: {
+            offset: {
+                x: 100,
+                y: 50
+            },
+            width: 160,
+            height: 50
     }
 })
 
@@ -83,7 +95,19 @@ const enemy = new Fighter({
             imageSrc: './images/favicon/Dinosaur_Attack.png',
             framesMax: 4
         },
-    }
+        takeHit: {
+            imageSrc: './images/favicon/Dinosaur_Hit.png',
+            framesMax: 3
+        }
+        },
+        attackBox: {
+            offset: {
+                x:-170,
+                y: 50
+            },
+            width: 170,
+            height: 50
+        }
 })
 
 
@@ -113,6 +137,8 @@ function animate() {
     c.fillStyle = 'black'
    c.fillRect(0, 0, canvas.width, canvas.height)
     background.update()
+    c.fillStyle = 'rgba(255, 255, 255, 0.15)'
+    c.fillRect(0,0, canvas.width, canvas.height)
     player.update()
     enemy.update()
 
@@ -143,12 +169,20 @@ function animate() {
         rectangle1: player,
         rectangle2: enemy
     }) &&
-    player.isAttacking
+    player.isAttacking &&
+    player.framesCurrent === 4
          ){
+        enemy.takeHit()
         player.isAttacking = false
-        enemy.health -= 20
-        document.querySelector('#enemyHealth').style.width = enemy.health + '%'
-         
+
+        gsap.to('#enemyHealth', {
+            width: enemy.health + '%'
+        })  
+    }
+
+    // missed hit
+    if(player.isAttacking && player.framesCurrent === 4) {
+        player.isAttacking = false
     }
 
     // for enemy
@@ -157,23 +191,31 @@ function animate() {
         rectangle1: enemy,
         rectangle2: player
     }) &&
-         enemy.isAttacking
+         enemy.isAttacking &&
+         enemy.framesCurrent === 2
          ){
+        player.takeHit()
         enemy.isAttacking = false
-        player.health -= 20
-        document.querySelector('#playerHealth').style.width = player.health + '%'
+        
+        gsap.to('#playerHealth', {
+            width: player.health + '%'
+        })
+    }
+
+    if(enemy.isAttacking && enemy.framesCurrent === 2) {
+        enemy.isAttacking = false
     }
 
     // end game based on health
     if (enemy.health <= 0 || player.health <= 0) {
         determineWinner({player, enemy, timerId})
-
     }
 }
 
 animate()
 
 window.addEventListener('keydown', (event) => {
+   if(!player.dead) {
     switch (event.key) {
     case 'd':
         keys.d.pressed = true
@@ -189,7 +231,11 @@ window.addEventListener('keydown', (event) => {
     case ' ':
         player.attack()
         break
+    }
+}
 
+if (!enemy.dead) {
+    switch (event.key) {
     case 'ArrowRight':
             keys.ArrowRight.pressed = true
             enemy.lastKey = 'ArrowRight'
@@ -205,7 +251,7 @@ window.addEventListener('keydown', (event) => {
             enemy.attack()
             break
    }
-    
+}
 })
 
 window.addEventListener('keyup', (event) => {
@@ -228,8 +274,7 @@ window.addEventListener('keyup', (event) => {
             keys.ArrowLeft.pressed = false
             break
        
-    }
-     
+    }  
  })
 /* start
 start() {
