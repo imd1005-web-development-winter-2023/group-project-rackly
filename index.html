@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- Set the page title -->
-    <title>Group Project</title>
+    <title>Zoo Rally</title>
 
     <!-- Set the charset we're using to UTF-8 -->
     <meta charset="UTF-8" />
@@ -11,27 +11,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- We are using a CSS Reset file to standardize browser default css -->
-    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="reset.css" />
 
     <!-- This is where all of our awesome CSS code goes -->
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- Set the Favicon  -->
-    <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
+    <link rel="icon" href="./images/favicon/Screenshot 2023-04-06 152716.png" type="image/png+xml" />
   </head>
+  
   <body>
-    <!--
+    
+      <!-- red container div -->
+      <div class = "redContainer">
 
-      ADD YOUR GROUP PROJECT CODE
+        <!-- smaller red container div -->
+        <div class = "smallContainer" >
+          
+          <!-- player health -->
+          <div class = "parentDivPlayer">
+            <div  class = "playerHealth"></div>
+           <div class ="childDivPlayer" id = "playerHealth"></div>
+            </div>
+    
+          <!-- timer -->
+          <div class = "timer" id = "timer">10</div>
 
-      YOU MAY REMOVE THE BOILERPLATE CODE BELOW
-
-    -->
+          <!-- enemy health -->
+          <div class = "parentDivEnemy">
+          <div  class = "enemyHealth"></div>
+         <div class ="childDivEnemy" id = "enemyHealth"></div>
+          </div>
+         <div></div>
+        
+    </div>
+    <div class="tieTag" id="displayText">TIE</div>
+   <canvas></canvas>
+    </div>
+      
     <main>
       <div id="app"></div>
     </main>
 
     <!-- This is where we add our awesome JavaScript code -->
+    <script src="./utils.js"></script>
+    <script src="./classes.js"></script>
     <script src="./main.js"></script>
+    <script src="./main.js/gsap.min.js"
   </body>
 </html>

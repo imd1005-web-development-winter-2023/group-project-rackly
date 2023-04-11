@@ -28,7 +28,16 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--body-default-colour);
-  background-color: var(--body-background-colour);
+  overflow: hidden;
+
+  /*
+    display: block;
+    background-image: url("./images/favicon/Background.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    */
 }
 
 main {
@@ -53,3 +62,119 @@ main {
   white-space: nowrap;
   border-width: 0;
 }
+
+head
+{
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.redContainer{
+
+ position: relative; 
+ display: inline-block;
+}
+.smallContainer{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+}
+
+.playerHealth {
+
+  background-color: yellow;
+  height: 30px;
+  width: 100%;
+}
+
+.parentDivPlayer {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.childDivPlayer {
+  position: absolute;
+  background: rgb(93, 201, 91);
+  top: 0;
+  right: 0;
+  bottom:0;
+  width: 100%;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  border-left: 4px solid white;
+}
+
+    
+.timer{
+
+  background-color: black;
+  width: 100px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 4px solid white;
+}
+
+.tieTag {
+  font-size: 100px;
+  font-family:Impact, sans-serif;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 3px;
+  position:absolute;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
+  display: none;
+}
+
+.enemyHealth {
+  background-color: rgb(255, 0, 0);
+  height: 30px;
+}
+
+.parentDivEnemy {
+  position: relative;
+  height: 30px;
+  width: 100%;
+}
+
+.childDivEnemy {
+  position: absolute;
+  background: rgb(93, 201, 91);
+  top: 0;
+  right: 0;
+  left:0;
+  bottom:0;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+}
+
+.displayText{
+          
+  position: absolute;
+  color: rgb(0, 0, 0);
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  }
+  
+  .start-screen{
+    display:block;
+  }
