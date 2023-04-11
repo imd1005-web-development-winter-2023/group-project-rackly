@@ -53,6 +53,7 @@ class Sprite {
 // new class duplicate
 class Fighter extends Sprite {
     constructor({
+        sprites,
         position, 
         velocity, 
         color = 'red',  
@@ -88,6 +89,7 @@ class Fighter extends Sprite {
         this.framesCurrent = 0
         this.framesElapsed = 0
         this.framesHold = 5
+        this.sprites = sprites
     }
 
 
