@@ -34,7 +34,7 @@ const player = new Fighter({
         y: 0
     },
     imageSrc: './images/favicon/Kangaroo_Idle.png',
-    framesMax: 32,
+    framesMax: 48,
     scale: 1,
     offset: {
         x: 30,
@@ -43,7 +43,7 @@ const player = new Fighter({
     sprites: {
         idle: {
             imageSrc: './images/favicon/Kangaroo_Idle.png',
-            framesMax: 32
+            framesMax: 48
         },
         attackKan: {
             imageSrc: './images/favicon/Kangaroo_Attack.png',
@@ -80,7 +80,7 @@ const enemy = new Fighter({
         y: 0
     },
     imageSrc: './images/favicon/Dinosaur_Idle.png',
-    framesMax: 4,
+    framesMax: 44, 
     scale: 1,
     offset: {
         x: -2900,
@@ -89,7 +89,7 @@ const enemy = new Fighter({
     sprites: {
         idle: {
             imageSrc: './images/favicon/Dinosaur_Idle.png',
-            framesMax: 4
+            framesMax: 44
         },
         attackKan: {
             imageSrc: './images/favicon/Dinosaur_Attack.png',
