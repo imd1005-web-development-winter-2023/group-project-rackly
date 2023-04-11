@@ -111,7 +111,7 @@ head
 
     
 .timer{
-  
+
   background-color: black;
   width: 100px;
   height: 50px;
@@ -124,10 +124,12 @@ head
 }
 
 .tieTag {
-
+  font-size: 100px;
+  font-family:Impact, sans-serif;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 3px;
   position:absolute;
   color: white;
-  
   align-items: center;
   justify-content: center;
   top: 0;
@@ -138,7 +140,6 @@ head
 }
 
 .enemyHealth {
-
   background-color: rgb(255, 0, 0);
   height: 30px;
 }
