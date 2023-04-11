@@ -71,7 +71,7 @@ const enemy = new Fighter({
     framesMax: 44,
     scale: 1,
     offset: {
-        x: 30,
+        x: -2900,
         y: 1200
     },
     sprites: {
