@@ -1,4 +1,3 @@
-
 class Sprite {
     constructor({
         position, 
@@ -34,7 +33,7 @@ class Sprite {
     }
 
     animateFrames() {
-        this.framesElapsed++
+
 
         if (this.framesElapsed % this.framesHold === 0) {
             if (this.framesCurrent < this.framesMax - 1) {
@@ -50,6 +49,7 @@ class Sprite {
         this.animateFrames()
     }
 }
+
 
 
 // new class duplicate
@@ -101,31 +101,26 @@ class Fighter extends Sprite {
         }
     }
 
-    
 
+    
     update() {
         this.draw()
         if (!this.dead) this.animateFrames()
 
-        // attack boxes
         this.attackBox.position.x = this.position.x + this.attackBox.offset.x
-        this.attackBox.position.y = this.position.y + this.attackBox.offset.y
+        this.attackBox.position.y = this.position.y
 
         this.position.x += this.velocity.x
         this.position.y += this.velocity.y
 
         if (this.position.y + this.height + this.velocity.y >= canvas.height - 100) {
             this.velocity.y = 0
-            this.position.y = 330
         }else this.velocity.y += gravity
     }
-    
+
     attack() {
         this.switchSprite('attackKan')
         this.isAttacking = true
-        /*setTimeout(() => {
-            this.isAttacking = false
-        }, 100)*/
     }
 
     takeHit(){
@@ -134,13 +129,16 @@ class Fighter extends Sprite {
     }
 
     switchSprite(sprite) {
-        if (this.image === this.sprites.attackKan.image && 
-            this.framesCurrent < this.sprites.attackKan.framesMax -1) return
+        if (
+            this.image === this.sprites.attackKan.image &&
+            this.framesCurrent < this.sprites.attackKan.framesMax - 1
+          )
+            return
 
-        if(
+        if (
             this.image === this.sprites.takeHit.image &&
-            this.framesCurrent < this.sprites.takeHit.framesMax -1
-        )
+            this.framesCurrent < this.sprites.takeHit.framesMax - 1
+            )
             return
 
         switch (sprite) {
@@ -151,20 +149,22 @@ class Fighter extends Sprite {
                     this.framesCurrent = 0
                 }
                 break
+
             case 'attackKan':
                 if (this.image !== this.sprites.attackKan.image) {
                     this.image = this.sprites.attackKan.image
                     this.framesMax = this.sprites.attackKan.framesMax
                     this.framesCurrent = 0
-                    }
-                    break
+                }   
+                break
+
             case 'takeHit':
                 if (this.image !== this.sprites.takeHit.image) {
                     this.image = this.sprites.takeHit.image
                     this.framesMax = this.sprites.takeHit.framesMax
                     this.framesCurrent = 0
-                    }
-                    break
+                }
+                break
         }
     }
 
