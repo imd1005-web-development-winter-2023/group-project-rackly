@@ -34,7 +34,7 @@ const player = new Fighter({
         y: 0
     },
     imageSrc: './images/favicon/Kangaroo_Idle.png',
-    framesMax: 48,
+    framesMax: 32,
     scale: 1,
     offset: {
         x: 30,
@@ -43,7 +43,7 @@ const player = new Fighter({
     sprites: {
         idle: {
             imageSrc: './images/favicon/Kangaroo_Idle.png',
-            framesMax: 8
+            framesMax: 32
         },
         attackKan: {
             imageSrc: './images/favicon/Kangaroo_Attack.png',
