@@ -124,12 +124,15 @@ class Fighter extends Sprite {
     }
 
     attack() {
-        this.switchSprite('attack')
-        this.isAttacking = true
-        setTimeout(() => {
-            this.isAttacking = false
-            this.switchSprite('idle')
-        }, 100) 
+        if (this.death != true) {
+            this.switchSprite('attack')
+            this.isAttacking = true
+            setTimeout(() => {
+                this.isAttacking = false
+                this.switchSprite('idle')
+                }, 100) 
+        }
+        
     }
 
     takeHit() {
@@ -137,7 +140,6 @@ class Fighter extends Sprite {
         this.switchSprite('takeHit')
         if (this.health <= 0) {
           this.switchSprite('death')
-          this.death = true
         } else setTimeout(() => {
             this.switchSprite('idle')
         }, 100) 
@@ -180,6 +182,7 @@ class Fighter extends Sprite {
                     this.image = this.sprites.death.image
                     this.framesMax = this.sprites.death.framesMax
                     this.framesCurrent = 0
+                    this.death= true
                 }
                 break   
 
